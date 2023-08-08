@@ -16,25 +16,16 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Timer(Duration(seconds: 4), () => NextScreen(context, LogInorSignUp()));
+    Timer(Duration(seconds: 6), () => NextScreen(context, LogInorSignUp()));
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Color(0xff1e91b6),
       body: Center(
-        child: Text(
-          "Splash Screen",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 12,
-            fontFamily: "Montserrat",
-            fontWeight: FontWeight.w500,
-          ),
-        ),
+        child: Image.asset("assets/images/App Logo .png",height: 250,)
       )
     );
   }
